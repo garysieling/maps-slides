@@ -25,8 +25,154 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>The Story of Maps</section>
+				<section>
+					<h3>Tech</h3>
+					<ul>
+						<li>All Javascript</li>
+						<li>...Except science code (Python, Fortran, ...)</li>
+						<li>Lambda</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Javascript lambdas</h3>
+					<ul>
+						<li>A lot of non-profits in this space</li>
+						<li>Cost control</li>
+						<li>Fast startup time</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Use cases</h3>
+						<li>Natural disasters - hurricanes, forest fires</li>
+						<li>Directions - heavier use in cities, holidays</li>
+						<li>Long term science - mapping the edge of the Sahara</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Container</h1>
+					<ul>
+						<li>Satellite (Cubesat, Landsat, etc)</li>
+						<li>Plane</li>
+						<li>Drone</li>
+						<li>Kite</li>
+						<li>Hot air balloon?</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Device features</h3>
+					<ul>
+						<li>Drones - airspace restrictions, pathing</li>
+						<li>Drones - altitude vs. resolution</li>
+						<li>Satellites - orientation</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Remote Sensor(s)</h1>
+					<ul>
+						<li>Camera</li>
+						<li>SAR</li>
+						<li>Timestamp</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Ground station</h1>
+					<ul>
+						<li>AWS?</li>
+						<li>Proprietary thing</li>
+						<li>Data center?</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Images - Notes</h3>
+					<ul>
+						<li>Can be outside visible spectrum</li>
+						<li>SAR - bounces, so confused by buildings, but can see through clouds</li>
+						<li>Shutter in device can lead to small gaps between images</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Raw file storage (L0)</h1>
+					<ul>
+						<li>Security</li>
+						<li>Proprietary format?</li>
+						<li>GDAL</li>
+						<li>Cumulus / Dashboard - UI for monitoring copies</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Post-processing</h1>
+				</section>
+				<section>
+					<h1>Geo-referencing</h1>
+					<ul>
+						<li>TODO - is that the right term?</li>
+						<li>Choose coordinate system (WGS...)</li>
+						<li>Something on the ground?</li>
+						<li>Location of satellite (by timestamp)</li>
+						<li>Mathy code- in docker</li>
+						<li>ECS?</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Photogrammetry</h3>
+					<ul>
+						<li>Lens distortion</li>
+						<li>SIFT (patented?)</li>
+						<li>Line up using points from SIFT</li>
+					</ul>
+				</section>
+				<section>
+					<h3>3D Output</h3>
+					<ul>
+						<li>Same object from above (different spots) - TODO vocab term here</li>
+						<li>Point cloud</li>
+						<li>To mesh</li>
+						<li>Overlay images on mesh</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Stitching images?</h3>
+					<ul>
+						<li>These are very large files</li>
+						<li>COGS?</li>
+						<li>ECS?</li>
+						<li>S3?</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Tiles</h3>
+					<ul>
+						<li>rdnt.io / marblecutter</li>
+						<li>One set per zoom level</li>
+						<li>AWS Lambda</li>
+						<li>S3</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Browsing Tiles</h3>
+					<ul>
+						<li>
+							Folder structure - zoom + location
+						</li>
+						<li>
+							Lambda?
+						</li>
+						<li>
+							S3 - byte ranging 
+						</li>
+						<li>Leaflet.js (TODO note Colby's plugin)</li>
+						<li>TODO: find that library for making maps from python</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Machine Learning</h3>
+					<ul>
+						<li>Detect buildings (find population centers)</li>
+						<li>Cloudy or not cloudy?</li>
+						<li>Change detection (e.g. before/after earthquake)</li>
+					</ul>
+				</section>
 			</div>
 		</div>
 
