@@ -100,12 +100,23 @@
 						<li>Cumulus / Dashboard - UI for monitoring copies</li>
 					</ul>
 				</section>
+
+				<section>
+					<img src="images/cumulus-dashboard1.png" />
+				</section>
+
+				<section>
+					<img src="images/cumulus-dashboard2.png" />
+				</section>
+
 				<section>
 					<h1>Post-processing</h1>
 				</section>
+
 				<section>
 					<h1>Geo-referencing</h1>
 					<ul>
+						<li>JavaScript is glue here</li>
 						<li>TODO - is that the right term?</li>
 						<li>Choose coordinate system (WGS...)</li>
 						<li>Something on the ground?</li>
@@ -114,6 +125,7 @@
 						<li>ECS?</li>
 					</ul>
 				</section>
+
 				<section>
 					<h3>Photogrammetry</h3>
 					<ul>
@@ -122,6 +134,7 @@
 						<li>Line up using points from SIFT</li>
 					</ul>
 				</section>
+
 				<section>
 					<h3>3D Output</h3>
 					<ul>
@@ -131,15 +144,17 @@
 						<li>Overlay images on mesh</li>
 					</ul>
 				</section>
+
 				<section>
 					<h3>Stitching images?</h3>
 					<ul>
 						<li>These are very large files</li>
-						<li>COGS?</li>
+						<li>COGS - geotiff.js</li>
 						<li>ECS?</li>
 						<li>S3?</li>
 					</ul>
 				</section>
+
 				<section>
 					<h3>Tiles</h3>
 					<ul>
@@ -149,6 +164,7 @@
 						<li>S3</li>
 					</ul>
 				</section>
+
 				<section>
 					<h3>Browsing Tiles</h3>
 					<ul>
@@ -165,6 +181,21 @@
 						<li>TODO: find that library for making maps from python</li>
 					</ul>
 				</section>
+
+				<section>
+					<code>
+						// initialize the map on the "map" div with a given center and zoom
+						const map = L.map('map', {
+							center: [51.505, -0.09],
+							zoom: 13
+						});
+					</code>
+				</section>
+
+				<section>
+					<img src="images/leafletjs.png" />
+				</section>
+
 				<section>
 					<h3>Machine Learning</h3>
 					<ul>
@@ -172,6 +203,20 @@
 						<li>Cloudy or not cloudy?</li>
 						<li>Change detection (e.g. before/after earthquake)</li>
 					</ul>
+				</section>
+
+				<section>
+					<h3>Notebooks</h3>
+					<ul>
+						<!--  
+							https://observablehq.com/@palewire/regional-maps-of-california-buildings-in-fire-hazard-zones
+						-->
+						<li>ObservableHQ</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="images/observablehq.png" />
 				</section>
 			</div>
 		</div>
