@@ -25,7 +25,7 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>The Story of Maps</section>
+				<section>Cloud Native Mapping Apps: How Satellite Imagery Gets From the Sky to Your Phone</section>
 
 				<section>
 					<p><img src="images/e84a.png" /></p>
@@ -33,51 +33,37 @@
 				</section>
 
 				<section>
+					<img src="images/googlemaps.png" />
+				</section>
+				
+				<section>
 					<img src="images/landsat-illustration.jpg" />
 				</section>
 
 				<section>
-					<img src="images/googlemaps.png" />
+					<h3>Drone Path</h3>
+					<img src="images/drone_path.jpeg" />
+				</section>
+	
+				<section>
+					<h3>Historic Aerial Footage</h3>
+					<img src="images/historical_footage.gif" >
 				</section>
 
 				<section>
-					<h3>Tech</h3>
-					<ul>
-						<li>Gatsby - web UIs hosted on S3</li>
-						<li>JavaScript</li>
-						<li>...Except science code (Python, Fortran, ...)</li>
-						<li>Lambda</li>
-					</ul>
+					<h3>Forest Fire</h3>
+					<img src="images/forest_fire.png" />
 				</section>
 
 				<section>
-					<h3>Use cases</h3>
-						<li>Natural disasters - hurricanes, forest fires</li>
-						<li>Directions - heavier use in cities, holidays</li>
-						<li>Science research - mapping edges of ice, sahara, etc</li>
-					</ul>
+					<h3>Vegetation</h3>
+					<img src="images/vegetation.png" />
 				</section>
 
 				<section>
-					<img src="images/cubesatdata2.png" />
+					<h3>Collections</h3>
+					<img src="images/earthdatasearch.png" />
 				</section>
-
-				<!--section>
-					TODO - make an visualization of the flight of an image
-				</section -->
-
-				<section>
-					<img src="images/cubesat.jpg" />
-				</section>
-
-				<!--section>
-					<h1>Ground station</h1>
-					<ul>
-						<li>AWS?</li>
-						<li>Proprietary thing</li>
-						<li>Data center?</li>
-					</ul>
-				</section-->
 
 				<section>
 					<h1>AWS Groundstation</h1>
@@ -85,68 +71,95 @@
 				</section>
 
 				<section>
+					<h1>AWS Groundstation</h1>
+					<img src="images/groundstation-disaster.png" />
+				</section>
+
+				<section>
 					<img src="images/landsat-s3.png" />
 				</section>
 
 				<section>
-					<img src="images/earthdatasearch.png" />
-				</section>
-
-				<section>
-					<img src="images/vegetation.png" />
-				</section>
-
-				<section>
-					<img src="images/polar-visual.png" />
-					<a href="https://www.polarview.aq/arctic">https://www.polarview.aq/arctic</a>
-				</section>
-				
-				<section>
-					<img src="images/polar-visual-sizes.png" />
-					<a href="https://www.polarview.aq/arctic">https://www.polarview.aq/arctic</a>
-				</section>
-
-				<section>
-					<img src="images/polar-visual-time.png" />
-					<a href="https://www.polarview.aq/arctic">https://www.polarview.aq/arctic</a>
-				</section>
-				
-				<section>
-					<img src="images/polar-visual-sar.png" />
-					<a href="https://www.polarview.aq/arctic">https://www.polarview.aq/arctic</a>
-				</section>
-
-				<section>
-					<h3>Browsing Tiles</h3>
+					<h1>DigitalGlobe</h1>
 					<ul>
-						<li>
-							Folder structure - zoom + location
-						</li>
-						<li>
-							Lambda?
-						</li>
-						<li>
-							S3 - byte ranging 
-						</li>
-						<li>Leaflet.js (TODO note Colby's plugin)</li>
-						<li>TODO: find that library for making maps from python</li>
+						<li><a href="http://blog.digitalglobe.com/industry/sending-data-from-space-to-amazon-s3-in-less-than-a-minute/">1-60 minutes</a></li>
+						<li>80 TB/day</li>
+						<li>100 TB</li>
+						<li>40% S3 cache hit rate</li>
 					</ul>
 				</section>
 
 				<section>
-					<code>
-						// initialize the map on the "map" div with a given center and zoom
-						const map = L.map('map', {
-							center: [51.505, -0.09],
-							zoom: 13
-						});
-					</code>
+					<h3>Science Code</h3>
 				</section>
 
 				<section>
+					<h3>Ground Control Point</h3>
+					<img src="images/ground_control_point.jpg" />
+				</section>
+
+				<section>
+					<h3>Projection</h3>
+					<img src="images/projection2.jpg" />
+				</section>
+
+				<section>
+					<h3>Lenses</h3>
+					<img src="images/lenses.png" />
+				</section>
+				
+				<section>
+					<h3>Build your own map UI</h3>
+				</section>
+
+				<section>
+					<h1>Why Gatsby</h1>
+					<ul>
+						<li>Avoid editing webpack files</li>
+						<li>Easy styling</li>
+						<li>Production quality javascript builds</li>
+						<li>Makes basic page routing a breeze to set up</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>UI</h3>
+					<ul>
+						<li>Gatsby - Web UIs hosted on S3</li>
+						<li>Leaflet.js</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Leaflet.js</h3>
+					<pre>
+						<code>
+							// initialize the map on the "map" div with a given center and zoom
+							const map = L.map('map', {
+								center: [51.505, -0.09],
+								zoom: 13
+							});
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h3>Leaflet.js</h3>
 					<img src="images/leafletjs.png" />
 				</section>
-	
+
+				<section>
+					<h3>Backend - browsing Tiles</h3>
+					<ul>
+						<li>
+							Folder structure: zoom + location
+						</li>
+						<li>
+							S3 - byte ranging 
+						</li>
+					</ul>
+				</section>
+
 				<section>
 					<h1>Geotiff.js - Browser</h1>
 					<img src="images/geotiffjs-browser.png" />
@@ -173,21 +186,52 @@
 				</section>
 
 				<section>
-					<h3>Javascript lambdas</h3>
+					<h3>Processing Pipeline</h3>
 					<ul>
-						<li>Non-profits vs. commercial</li>
+						<li>JavaScript - Glue code</li>
+						<li>Science code (Python, ...)</li>	
+					</ul>
+				</section>
+
+				<section>
+					<h3>Why Javascript lambdas</h3>
+					<ul>
 						<li>Cost control</li>
 						<li>Fast startup time</li>
+						<li>Microservices</li>
 					</ul>
 				</section>	
 
-				<!-- section>
-					<h3>Disaster stuff?</h3>
-
-					TODO - screenshots
+				<!--section>
+					<h3>Use cases</h3>
+						<li>Natural disasters - hurricanes, forest fires</li>
+						<li>Directions - heavier use in cities, holidays</li>
+						<li>Science research - mapping edges of ice, sahara, etc</li>
+					</ul>
 				</section -->
 
-				<section>
+				<!-- section>
+					<img src="images/cubesatdata2.png" />
+				</section -->
+
+				<!--section>
+					TODO - make an visualization of the flight of an image
+				</section -->
+
+				<!-- section>
+					<img src="images/cubesat.jpg" />
+				</section -->
+
+				<!--section>
+					<h1>Ground station</h1>
+					<ul>
+						<li>AWS?</li>
+						<li>Proprietary thing</li>
+						<li>Data center?</li>
+					</ul>
+				</section-->
+
+				<!--section>
 					<h1>Container</h1>
 					<ul>
 						<li>Satellite (Cubesat, Landsat, etc)</li>
@@ -196,7 +240,33 @@
 						<li>Kite</li>
 						<li>Hot air balloon?</li>
 					</ul>
+				</section-->
+
+				<!--section>
+					<img src="images/polar-visual.png" />
+					<a href="https://www.polarview.aq/arctic">https://www.polarview.aq/arctic</a>
 				</section>
+				
+				<section>
+					<img src="images/polar-visual-sizes.png" />
+					<a href="https://www.polarview.aq/arctic">https://www.polarview.aq/arctic</a>
+				</section>
+
+				<section>
+					<img src="images/polar-visual-time.png" />
+					<a href="https://www.polarview.aq/arctic">https://www.polarview.aq/arctic</a>
+				</section>
+				
+				<section>
+					<img src="images/polar-visual-sar.png" />
+					<a href="https://www.polarview.aq/arctic">https://www.polarview.aq/arctic</a>
+				</section-->
+
+				<!-- section>
+					<h3>Disaster stuff?</h3>
+
+					TODO - screenshots
+				</section -->
 
 				<!--section>
 					<h1>OpenDroneMap</h1>
@@ -222,7 +292,7 @@
 					</ul>
 				</section -->
 
-				<section>
+				<!-- section>
 					<img src="images/Active-Satellite-Flat-Surface.png " />
 					https://gisgeography.com/synthetic-aperture-radar-examples/
 				</section>
@@ -240,7 +310,7 @@
 				<section>
 					<img src="images/Radarsat2-Example.png " />
 					https://gisgeography.com/synthetic-aperture-radar-examples/
-				</section>
+				</section -->
 
 				<!--section>
 					<h1>Remote Sensing</h1>
@@ -266,7 +336,7 @@
 					</ul>
 				</section -->
 
-				<section>
+				<!-- section>
 					<h1>Post-processing</h1>
 				</section>
 	
@@ -276,7 +346,7 @@
 
 				<section>
 					<img src="images/cumulus-dashboard2.png" />
-				</section>
+				</section -->
 
 				<!--section>
 					<h1>Geo-referencing</h1>
@@ -369,30 +439,32 @@
 					TODO - is that gif on the E84 blog runnable?
 				</section -->
 
-				<section>
+				<!--section>
 					<h3>Notebooks</h3>
-					<ul>
-						<!--  
+					<ul> 
 							https://observablehq.com/@palewire/regional-maps-of-california-buildings-in-fire-hazard-zones
-						-->
+						
 						<li>ObservableHQ</li>
+					</ul>
+				</section-->
+
+				<!-- section>
+					<img src="images/observablehq.png" />
+				</section -->
+
+				<section>
+					<h1>Gatsby - Lessons learned</h1>
+					<ul>
+						<li>Occasionally some hiccups from being on the bleeding edge/upgrading fast</li>
+						<li>Opinionated defaults prevent engineers from arguing - but lots of escape hatches</li>
+						<li>Hosting on S3- minor hiccups with JSON files</li>
 					</ul>
 				</section>
 
 				<section>
-					<img src="images/observablehq.png" />
-				</section>
-
-				<section>
-					<h1>Lessons learned</h1>
+					<h3>References</h3>
 					<ul>
-						<li>Gatsby let us not spend any time editing webpack files</li>
-						<li>Easy styling</li>
-						<li>Occasionally some hiccups from being on the bleeding edge/upgrading fast</li>
-						<li>Production quality javascript builds up front</li>
-						<li>Easy to build custom components with react</li>
-						<li>Opinionated defaults prevent engineers from arguing - but lots of escape hatches</li>
-						<li>makes basic page routing and stuff under the hood a breeze to set up</li>
+						<li>https://blog.dronedeploy.com/case-study-830cfc23db55#.e0xl69177</li>
 					</ul>
 				</section>
 			</div>
