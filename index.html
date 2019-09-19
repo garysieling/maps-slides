@@ -25,7 +25,10 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Cloud Native Mapping Apps: How Satellite Imagery Gets From the Sky to Your Phone</section>
+				<section>
+					<h2>Cloud Native Mapping Apps</h2> 
+					<h3>How Satellite Imagery Gets From the Sky to Your Phone</h3>
+				</section>
 
 				<section>
 					<p><img src="images/e84a.png" /></p>
@@ -84,23 +87,23 @@
 					<ul>
 						<li><a href="http://blog.digitalglobe.com/industry/sending-data-from-space-to-amazon-s3-in-less-than-a-minute/">1-60 minutes</a></li>
 						<li>80 TB/day</li>
-						<li>100 TB</li>
-						<li>40% S3 cache hit rate</li>
+						<li>100 PB Stored</li>
+						<li>40% cache hit rate</li>
 					</ul>
 				</section>
 
 				<section>
-					<h3>Science Code</h3>
+					<h1>Science Code</h1>
+				</section>
+
+				<section>
+					<h3>Projection</h3>
+					<img src="images/projection2.png" />
 				</section>
 
 				<section>
 					<h3>Ground Control Point</h3>
 					<img src="images/ground_control_point.jpg" />
-				</section>
-
-				<section>
-					<h3>Projection</h3>
-					<img src="images/projection2.jpg" />
 				</section>
 
 				<section>
@@ -123,7 +126,7 @@
 				</section>
 
 				<section>
-					<h3>UI</h3>
+					<h1>UI</h1>
 					<ul>
 						<li>Gatsby - Web UIs hosted on S3</li>
 						<li>Leaflet.js</li>
@@ -133,12 +136,16 @@
 				<section>
 					<h3>Leaflet.js</h3>
 					<pre>
-						<code>
-							// initialize the map on the "map" div with a given center and zoom
-							const map = L.map('map', {
-								center: [51.505, -0.09],
-								zoom: 13
-							});
+						<code data-trim data-noescape>
+							var map = L.map('map').setView([51.505, -0.09], 13);
+
+							L.tileLayer(
+								'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+							).addTo(map);
+
+							L.marker([51.5, -0.09]).addTo(map)
+								.bindPopup('A CSS3 popup.')
+								.openPopup();
 						</code>
 					</pre>
 				</section>
@@ -161,28 +168,28 @@
 				</section>
 
 				<section>
-					<h1>Geotiff.js - Browser</h1>
+					<h3>Geotiff.js - Browser</h3>
 					<img src="images/geotiffjs-browser.png" />
 				</section>
 
 				<section>
-					<h1>Geotiff.js - Tile</h1>
-					<img src="images/geotiffjs-canvas2.png" />
+					<h3>Geotiff.js - Tile</h3>
+					<img src="images/geotiffjs-1tif.png" />
 				</section>
 
 				<section>
-					<h1>Geotiff.js - Network</h1>
-					<img src="images/geotiffjs-networkrequests.png" />
-				</section>
-
-				<section>
-					<h1>Geotiff.js - Tile</h1>
+					<h3>Geotiff.js - Tile</h3>
 					<img src="images/geotiffjs-tile.png" />
 				</section>
 
 				<section>
-					<h1>Geotiff.js - Tile</h1>
-					<img src="images/geotiffjs-1tif.png" />
+					<h3>Geotiff.js - Network</h3>
+					<img src="images/geotiffjs-networkrequests.png" />
+				</section>
+
+				<section>
+					<h3>Geotiff.js - Tile</h3>
+					<img src="images/geotiffjs-canvas2.png" />
 				</section>
 
 				<section>
@@ -453,7 +460,7 @@
 				</section -->
 
 				<section>
-					<h1>Gatsby - Lessons learned</h1>
+					<h3>Gatsby - Lessons learned</h3>
 					<ul>
 						<li>Occasionally some hiccups from being on the bleeding edge/upgrading fast</li>
 						<li>Opinionated defaults prevent engineers from arguing - but lots of escape hatches</li>
@@ -465,6 +472,7 @@
 					<h3>References</h3>
 					<ul>
 						<li>https://blog.dronedeploy.com/case-study-830cfc23db55#.e0xl69177</li>
+						<li>http://blog.digitalglobe.com/industry/sending-data-from-space-to-amazon-s3-in-less-than-a-minute/</li>
 					</ul>
 				</section>
 			</div>
@@ -485,5 +493,68 @@
 				]
 			});
 		</script>
+
+
+
+
+<style type="text/css">
+    /* 1. Style header/footer <div> so they are positioned as desired. */
+    #header-left {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+    }
+    #header-right {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+    }
+    #footer-left {
+        position: absolute;
+        bottom: 2%;
+        left: 2%;
+    }
+    #footer-right {
+        position: absolute;
+        bottom: 3%;
+        right: 3%;
+    }
+</style>
+
+<!-- 2. Create hidden header/footer <div> -->
+<div id="hidden" style="display:none;">
+    <div id="header">
+        <div id="header-left"></div>
+                <div id="header-right"></div>
+                <div id="footer-left"></div>
+        <div id="footer-right">@garysieling</div>
+    </div>
+</div>
+
+
+
+<!-- 2. Create hidden header/footer <div> -->
+	<div id="hidden" style="display:none;">
+		<div id="header">
+			<div id="header-left"></div>
+					<div id="header-right"></div>
+					<div id="footer-left"></div>
+			<div id="footer-right">@garysieling</div>
+		</div>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript">
+		// 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+		var header = $('#header').html();
+		if ( window.location.search.match( /print-pdf/gi ) ) {
+			Reveal.addEventListener( 'ready', function( event ) {
+				$('.slide-background').append(header);
+			});
+		}
+		else {
+			$('div.reveal').append(header);
+	   }
+	</script>
 	</body>
 </html>
