@@ -138,30 +138,64 @@
 				</section>
 
 				<section>
-					<h3>Leaflet.js</h3>
+					<img src="images/leaflet-philly.png" />
+				</section>
+
+				<section>
+					<h3>Libraries</h3>
 					<pre>
-						<code data-trim data-noescape>
-							var map = L.map('map').setView([51.505, -0.09], 13);
+						<code data-trim data-noescape>		
+								yarn add gatsby-plugin-react-leaflet \
+										 react-leaflet \
+										 leaflet
+						</code>
+					</pre>
+				</section>
 
-							L.tileLayer(
-								'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-							).addTo(map);
-
-							L.marker([51.5, -0.09]).addTo(map)
-								.bindPopup('A CSS3 popup.')
-								.openPopup();
+				<section>
+					<h3>gatsby-config.js</h3>
+					<pre>
+						<code data-trim data-noescape>		
+							plugins: [
+							  {
+							    resolve: 'gatsby-plugin-react-leaflet',
+							    options: {
+							      linkStyles: true 
+							    }
+							  }
+							]
 						</code>
 					</pre>
 				</section>
 
 				<section>
 					<h3>Leaflet.js</h3>
-					<img src="images/leafletjs.png" />
+					<pre>
+						<code data-trim data-noescape>								
+							const position = [39.9526, -75.1652 ];
+
+							const Map = () => 
+							  &lt;LeafletMap center={position} zoom={11}>
+							    &lt;TileLayer
+							      attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+							      url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'
+							    />
+							    &lt;Marker position={position}>
+							      &lt;Popup>
+							        A &lt;b>popup&lt;/b>.
+							      &lt;/Popup>
+							    &lt;/Marker>
+							  &lt;/LeafletMap>
+						</code>
+					</pre>
 				</section>
 
 				<section>
 					<h3>Backend - browsing Tiles</h3>
 					<ul>
+						<li>
+							Hosted - Mapbox, OpenStreetMap
+						</li>
 						<li>
 							Folder structure: zoom + location
 						</li>
@@ -169,6 +203,11 @@
 							S3 - byte ranging 
 						</li>
 					</ul>
+				</section>
+
+				<section>
+					<h3>Geotiff.js - Tile</h3>
+					<img src="images/geotiffjs-tile.png" />
 				</section>
 
 				<section>
@@ -181,20 +220,16 @@
 					<img src="images/geotiffjs-1tif.png" />
 				</section>
 
-				<section>
-					<h3>Geotiff.js - Tile</h3>
-					<img src="images/geotiffjs-tile.png" />
-				</section>
 
-				<section>
+				<!-- section>
 					<h3>Geotiff.js - Network</h3>
 					<img src="images/geotiffjs-networkrequests.png" />
-				</section>
+				</section -->
 
-				<section>
+				<!-- section>
 					<h3>Geotiff.js - Tile</h3>
 					<img src="images/geotiffjs-canvas2.png" />
-				</section>
+				</section -->
 
 				<section>
 					<h3>Processing Pipeline</h3>
