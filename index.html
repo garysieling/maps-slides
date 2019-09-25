@@ -54,23 +54,23 @@
 				</section>
 
 				<section>
+					<h1>DigitalGlobe</h1>
+					<ul>
+						<!--<li><a href="http://blog.digitalglobe.com/industry/sending-data-from-space-to-amazon-s3-in-less-than-a-minute/">1-60 minutes</a></li>-->
+						<li>80 TB/day</li>
+						<li>100 PB Stored</li>
+						<li>40% cache hit rate</li>
+					</ul>
+				</section>
+
+				<section>
 					<img src="images/aws-diagram.png " />
 				</section>
 
-				<section>
-					<h3>Vegetation</h3>
-					<img src="images/vegetation.png" />
-				</section>
-
-				<section>
-					<h3>Collections</h3>
-					<img src="images/earthdatasearch.png" />
-				</section>
-
-				<section>
+				<!-- section>
 					<h1>AWS Groundstation</h1>
 					<img src="images/groundstation.png" />
-				</section>
+				</section -->
 
 				<section>
 					<h1>AWS Groundstation</h1>
@@ -81,24 +81,11 @@
 					<h3>Processing Pipeline</h3>
 					<ul>
 						<li>JavaScript - Glue code</li>
-						<li>Science code (Python, ...)</li>	
+						<li>Science code (Docker, Python, ...)</li>
+						<li>Web UIs for monitoring</li>	
 					</ul>
 				</section>
-	
-				<section>
-					<img src="images/landsat-s3.png" />
-				</section>
-
-				<section>
-					<h1>DigitalGlobe</h1>
-					<ul>
-						<li><a href="http://blog.digitalglobe.com/industry/sending-data-from-space-to-amazon-s3-in-less-than-a-minute/">1-60 minutes</a></li>
-						<li>80 TB/day</li>
-						<li>100 PB Stored</li>
-						<li>40% cache hit rate</li>
-					</ul>
-				</section>
-
+				
 				<section>
 					<h1>Science Code</h1>
 				</section>
@@ -119,6 +106,54 @@
 				</section>
 				
 				<section>
+					<h3>Product Creation</h3>
+				</section>
+
+				<section>
+					<h3>Vegetation</h3>
+					<img src="images/vegetation.png" />
+				</section>
+
+				<section>
+					<h3>Collections</h3>
+					<img src="images/earthdatasearch.png" />
+				</section>
+
+				<section>
+					<img src="images/landsat-s3.png" />
+				</section>
+
+				<section>
+					<h3>Map Tiles</h3>
+					<img src="images/geotiffjs-tile.png" />
+				</section>
+
+				<section>
+					<h3>Geotiff.js - Tile</h3>
+					<img src="images/geotiffjs-1tif.png" />
+				</section>
+
+				<section>
+					<h3>Web UI Backend - Tiles</h3>
+					<ul>
+						<li>
+							Hosted - Mapbox, OpenStreetMap
+						</li>
+						<li>
+							Folder structure: zoom + location
+						</li>
+						<li>
+							S3 - byte ranging 
+						</li>
+					</ul>
+				</section>
+
+				<!--section>
+					<h3>Geotiff.js - Browser</h3>
+					<img src="images/geotiffjs-browser.png" />
+				</section-->
+
+				<section>
 					<h3>Build your own map UI</h3>
 				</section>
 
@@ -130,10 +165,10 @@
 				<section>
 					<h1>Why Gatsby</h1>
 					<ul>
-						<li>Avoid editing webpack files</li>
 						<li>Easy styling</li>
-						<li>Production quality javascript builds</li>
 						<li>Makes basic page routing a breeze to set up</li>
+						<li>Avoid editing webpack files</li>
+						<li>Production quality javascript builds</li>
 					</ul>
 				</section>
 
@@ -142,6 +177,14 @@
 					<ul>
 						<li>Gatsby - Web UIs hosted on S3</li>
 						<li>Leaflet.js</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>JAMstack</h3>
+					<ul>
+						<li>S3 hosting + Cloudfront</li>
+						<li>Microservices</li>
 					</ul>
 				</section>
 
@@ -205,36 +248,6 @@
 
 				<section>
 					<img src="images/leaflet-philly.png" />
-				</section>
-
-				<section>
-					<h3>Backend - browsing Tiles</h3>
-					<ul>
-						<li>
-							Hosted - Mapbox, OpenStreetMap
-						</li>
-						<li>
-							Folder structure: zoom + location
-						</li>
-						<li>
-							S3 - byte ranging 
-						</li>
-					</ul>
-				</section>
-
-				<section>
-					<h3>Geotiff.js - Tile</h3>
-					<img src="images/geotiffjs-tile.png" />
-				</section>
-
-				<!--section>
-					<h3>Geotiff.js - Browser</h3>
-					<img src="images/geotiffjs-browser.png" />
-				</section-->
-
-				<section>
-					<h3>Geotiff.js - Tile</h3>
-					<img src="images/geotiffjs-1tif.png" />
 				</section>
 
 
@@ -504,6 +517,15 @@
 						<li>Occasionally some hiccups from being on the bleeding edge/upgrading fast</li>
 						<li>Opinionated defaults prevent engineers from arguing - but lots of escape hatches</li>
 						<li>Hosting on S3- minor hiccups with JSON files</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>JAMstack - Lessons learned</h3>
+					<ul>
+						<li>Can switch API backends</li>
+						<li>Less moving parts to go down</li>
+						<li>Hard for an entire site to go down at once</li>
 					</ul>
 				</section>
 
